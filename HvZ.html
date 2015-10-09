@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>HvZ</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<script src='Chart.min.js'>
+	//carregar bibliotèca.
+	</script>
+	<script src='HvZ.js'></script>
+	<noscript> hay que joderse </noscript>
+</head>	
+<body>
+	<center>
+		<table style="width:90%">
+			<tr id="Numbers">
+			</tr>
+		</table>
+		<table style="width:100%">
+			<tr id="Graphs" style="display : none">
+				<td align="center">
+					Humans
+				</td>
+				<td align="center">
+					Zombies
+				</td>
+				<td align="center">
+					Jugadors
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="width : 33%">
+					<canvas id="Humans" style="width : 100%"></canvas>
+				</td>
+				<td align="center" style="width : 33%">
+					<canvas id="Zombies" style="width : 100%"></canvas>
+				</td>
+				<td align="center" style="width : 33%">
+					<canvas id="Players" style="width : 100%"></canvas>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<script type="text/javascript">
+		var HumanData = {
+			labels : [],
+			datasets : [
+				{
+					fillColor : "rgba(0,0,0,0)",
+					strokeColor : "#000000",
+					pointColor : "#000000",
+					pointStrokeColor : "#000000",
+					data : []
+				}
+			]
+		}
+		var ZombieData = {
+			labels : [],
+			datasets : [
+				{
+					fillColor : "rgba(0,0,0,0)",
+					strokeColor : "#ff0000",
+					pointColor : "#ff0000",
+					pointStrokeColor : "#ff0000",
+					data : []
+				}
+			]
+		}
+		var PlayerData = {
+			labels : [],
+			datasets : [
+				{
+					fillColor : "rgba(0,0,0,0)",
+					strokeColor : "#0000ff",
+					pointColor : "#0000ff",
+					pointStrokeColor : "#0000ff",
+					data : []
+				},
+				{
+					fillColor : "rgba(0,0,0,0)",
+					strokeColor : "#000000",
+					pointColor : "#000000",
+					pointStrokeColor : "#000000",
+					data : []
+				},
+				{
+					fillColor : "rgba(0,0,0,0)",
+					strokeColor : "#ff0000",
+					pointColor : "#ff0000",
+					pointStrokeColor : "#ff0000",
+					data : []
+				}
+			]
+		}
+		askdata();
+	</script>
+</body>
+</html>
